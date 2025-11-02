@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 0 0% 0%;
+}
+
+html, body, #__next { height: 100%; }
+
+body {
+  background-color: #000;
+  background-image:
+    radial-gradient(600px 300px at 50% -10%, rgba(124,58,237,0.25), rgba(0,0,0,0) 60%),
+    radial-gradient(800px 400px at 110% 10%, rgba(0,229,255,0.12), rgba(0,0,0,0) 60%),
+    radial-gradient(1000px 500px at -10% 0%, rgba(60,151,255,0.2), rgba(0,0,0,0) 60%),
+    radial-gradient(1200px 600px at 50% 120%, rgba(0,0,0,0.8), rgba(0,0,0,1) 70%);
+}
+
+@layer components {
+  .container-max {
+    @apply max-w-7xl mx-auto px-6 md:px-10;
+  }
+  .glass {
+    @apply backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl shadow-glow;
+  }
+  .section-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-10 items-center;
+  }
+}
